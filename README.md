@@ -47,3 +47,43 @@ currentLine(katzDeliLine); // "The line is currently: 1. Kent, 2. Matz"
 ```
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-deli-counter' title='Deli Counter Lab'>Deli Counter Lab</a> on Learn.co and start learning to code for free.</p>
+
+
+function takeANumber(katzDeliLine, name) {
+  var num = katzDeliLine.indexOf(name) + 1;
+  return 'Welcome, ' + name + '. You are number ' + num + ' in line.';
+}
+
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length < 1) {
+    return 'There is nobady waiting to be served';
+  }
+  
+  var name = katzDeliLine[0];
+  var array = [];
+  for (var i = 1; i < katzDeliline.length; i ++) {
+  var element = katzDeliline[i];
+  array.push(element);
+  }
+  
+  katzDeliline = array;
+  return 'Currently serving ' + name;
+}
+
+function currentLine(katzDeliline) {
+  if (katzDeliline.length < 1) {
+    return 'The line is currently empty';
+  }
+  
+  var string = 'The line is currently: ';
+  
+  for (var i = 0; i < katzDeliline.length; i ++) {
+    var num = i + 1;
+    var part = ', ' + num + '. ' + katzDeliline[i];
+    string += part;
+  }
+  
+  return string;
+}
+
+
